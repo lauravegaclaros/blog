@@ -55,5 +55,25 @@
   <footer>
     <p>&copy; 2025 Laura Alejandra Vega Claros</p>
   </footer>
+  <script>
+    (function() {
+      const btnTheme = document.getElementById('btnTheme');
+      const html = document.documentElement;
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        btnTheme.setAttribute('aria-pressed', savedTheme === 'dark');
+      }
+
+      btnTheme.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        btnTheme.setAttribute('aria-pressed', newTheme === 'dark');
+        localStorage.setItem('theme', newTheme);
+      });
+    })();
+  </script>
 </body>
 </html>
