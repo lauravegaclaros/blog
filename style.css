@@ -1,0 +1,119 @@
+:root {
+  --color-bg-light: #fdfdfd;
+  --color-bg-dark: #1e1e1e;
+  --color-text-light: #1e1e1e;
+  --color-text-dark: #ffffff;
+  --color-primary: #0077cc;
+  --color-secondary: #eaeaea;
+  --font-base: "Segoe UI", sans-serif;
+}
+[data-theme="light"] {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+}
+[data-theme="dark"] {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  font-size: 1.2rem;
+}
+#btnTheme {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+aside {
+  background: var(--color-secondary);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+aside img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+aside h2 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+aside li {
+  margin: 0.5rem 0;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+main h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+main ul {
+  list-style: none;
+  padding: 0;
+}
+main li {
+  margin-bottom: 0.7rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  margin-top: 2rem;
+}
+[data-theme="dark"] footer {
+  background: #2a2a2a;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
