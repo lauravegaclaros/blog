@@ -3,75 +3,255 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículum - Laura Alejandra Vega Claros</title>
+  <title>Currículum Vitae - Laura Alejandra Vega Claros</title>
    <link rel="stylesheet" href="style.css">
+   <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body data-theme="light">
-  <header>
-    <h1>Laura Alejandra Vega Claros</h1>
-    <p>Currículum Vitae</p>
-    <button id="btnTheme" aria-pressed="false">Cambiar tema</button>
+  <!-- ENCABEZADO CON NAVEGACIÓN -->
+  <header class="header" role="banner">
+    <div class="container header__container">
+      <div class="header__logo" aria-label="Logo con el nombre">Laura Vega Claros</div>
+      <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
+          <li class="nav__item"><a href="#experiencia" class="nav__link">Experiencia</a></li>
+          <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          ☰
+        </button>
+        <button id="btnTheme" aria-pressed="false">🌙 Modo Oscuro</button>
+      </div>
+    </div>
   </header>
-  <div class="container">
-    <!-- COLUMNA IZQUIERDA -->
-    <aside>
-      <img src="Lau.jpeg" alt="Laura Alejandra Vega Claros">
-      <h2>Datos Personales</h2>
-      <ul>
-        <li><strong>Email:</strong> laualevgaclaros@gmail.com</li>
-        <li><strong>Celular:</strong> 61832844</li>
-        <li><strong>Ciudad:</strong> Oruro - Bolivia</li>
-      </ul>
-    </aside>
 
-    <!-- COLUMNA DERECHA -->
-    <main>
-      <section>
-        <h2>Carrera</h2>
-        <p>Profesional en el área de Informática, con experiencia en soporte técnico, mantenimiento de equipos y diseño gráfico</p>
-      </section>
+  <!-- SECCIÓN HERO/PRINCIPAL -->
+  <section id="inicio" class="hero" role="region" aria-labelledby="hero-heading">
+    <div class="container">
+      <h1 id="hero-heading" class="hero__title">Hola, soy <span style="color: var(--color-secondary);">Laura Alejandra Vega Claros</span></h1>
+      <h2 class="hero__subtitle">Técnico Superior en Sistemas Informáticos</h2>
+      <p class="hero__text">Profesional en el área de Informática, con experiencia en soporte técnico, mantenimiento de equipos, diseño gráfico y desarrollo de p{áginas web.}.</p>
+      <a href="#contacto" class="btn">Contactar</a>
+      <button id="btnDownload" class="btn" style="margin-left: 15px;">Descargar CV</button>
+    </div>
+  </section>
 
-      <section>
-        <h2>Estudios</h2>
-        <ul>
-          <li>Técnico Superior en Sistemas Informáticos – Instituto Jesús María</li>
-        </ul>
-      </section>
+  <!-- SECCIÓN SOBRE MÍ -->
+  <section id="sobre-mi" class="section about" role="region" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading" class="section__title">Sobre Mí</h2>
+      <div class="about__content">
+        <div class="about__image">
+          <img src="Imagenes/Lau-removebg-preview.jpg" alt="Laura Alejandra Vega Claros" width="300" height="300">
+        </div>
+        <div class="about__text">
+          <p>Soy Laura Alejandra Vega Claros, Técnico Superior en Sistemas Informáticos egresada del Instituto Jesús María. Mi experiencia se centra en soporte técnico, mantenimiento de equipos, diseño gráfico y desarrollo web.</p>
+          <p>Me considero una persona proactiva, responsable y con gran capacidad para resolver problemas técnicos. Disfruto trabajando en entornos desafiantes donde pueda aplicar mis conocimientos y aprender nuevas tecnologías.</p>
+          <p>Estoy constantemente actualizando mis conocimientos y habilidades para mantenerme al tanto del avance de la tecnología y informática.</p>
+          
+          <h3 style="margin-top: 20px;">Datos Personales</h3>
+          <ul style="list-style: none; padding: 0; margin-top: 10px;">
+            <li style="margin-bottom: 8px;">
+              <a href="mailto:laualevgaclaros@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> laualevgaclaros@gmail.com
+              </a>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <a href="https://wa.me/59161832844?text=Hola%20Laura,%20vi%20tu%20curriculum%20y%20me%20interesa%20contactarte" class="contact-link" target="_blank">
+                <i class="fas fa-phone"></i> +591 61832844
+              </a>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <a href="https://www.google.com/maps?q=Oruro,Bolivia" class="contact-link" target="_blank">
+                <i class="fas fa-map-marker-alt"></i> Oruro - Bolivia
+              </a>
+            </li>
+          </ul>
+          
+          <!-- Botón de WhatsApp -->
+          <a href="https://wa.me/59161832844?text=Hola%20Laura,%20vi%20tu%20curriculum%20y%20me%20interesa%20contactarte" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section>
-        <h2>Experiencia Laboral</h2>
-        <ul>
-          <li><strong>Técnico en Soporte Informático</strong> – Empresa Dic Bol 2024<br>
-              Instalación, mantenimiento y reparación de equipos de cómputo.
-          </li>
-          <li><strong>Encargada de Marketing</strong> – PCHouse 2023<br>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </div>
-  <footer>
-    <p>&copy; 2025 Laura Alejandra Vega Claros</p>
+  <!-- SECCIÓN HABILIDADES -->
+  <section id="habilidades" class="section skills" role="region" aria-labelledby="skills-heading">
+    <div class="container">
+      <h2 id="skills-heading" class="section__title">Mis Habilidades</h2>
+      <div class="skills__container">
+        <div class="skill">
+          <h3 class="skill__title"><span class="skill__icon">💻</span> Soporte Técnico</h3>
+          <div class="skill__bar">
+            <div class="skill__progress" data-width="90%" style="width: 90%;"></div>
+          </div>
+          <p>Mantenimiento y reparación de equipos, instalación de software, solución de problemas técnicos</p>
+        </div>
+        <div class="skill">
+          <h3 class="skill__title"><span class="skill__icon">🖥️</span> Sistemas Informáticos</h3>
+          <div class="skill__bar">
+            <div class="skill__progress" data-width="50%" style="width: 50%;"></div>
+          </div>
+          <p>Administración de sistemas, redes básicas, hardware y software</p>
+        </div>
+        <div class="skill">
+          <h3 class="skill__title"><span class="skill__icon">🎨</span> Diseño Gráfico</h3>
+          <div class="skill__bar">
+            <div class="skill__progress" data-width="70%" style="width: 70%;"></div>
+          </div>
+          <p>Herramientas de diseño, marketing visual, creatividad</p>
+        </div>
+        <div class="skill">
+          <h3 class="skill__title"><span class="skill__icon">📊</span> Marketing</h3>
+          <div class="skill__bar">
+            <div class="skill__progress" data-width="70%" style="width: 70%;"></div>
+          </div>
+          <p>Gestión de marketing, estrategias digitales, redes sociales</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN EXPERIENCIA -->
+  <section id="experiencia" class="section experience" role="region" aria-labelledby="experience-heading">
+    <div class="container">
+      <h2 id="experience-heading" class="section__title">Experiencia Laboral</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-item__content">
+            <div class="timeline-item__date">2024</div>
+            <h3 class="timeline-item__title">Técnico en Soporte Informático</h3>
+            <p>Empresa Dic Bol, Oruro - Bolivia</p>
+            <ul>
+              <li>Instalación, mantenimiento y reparación de equipos de cómputo</li>
+              <li>Solución de problemas técnicos de hardware y software</li>
+              <li>Atención al cliente y soporte técnico presencial</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-item__content">
+            <div class="timeline-item__date">2023</div>
+            <h3 class="timeline-item__title">Encargada de Marketing</h3>
+            <p>PCHouse, Oruro - Bolivia</p>
+            <ul>
+              <li>Gestión de estrategias de marketing</li>
+              <li>Diseño de material promocional</li>
+              <li>Administración de redes sociales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ESTUDIOS -->
+  <section class="section" role="region" aria-labelledby="education-heading">
+    <div class="container">
+      <h2 id="education-heading" class="section__title">Estudios</h2>
+      
+      <div class="education-item">
+        <div class="education-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="education-content">
+          <h3 class="education-title">Técnico Superior en Sistemas Informáticos</h3>
+          <div class="institution-name">
+            <img src="Iconos/logoINTJEM.jpg" alt="Logo Instituto Jesús María" class="institution-logo">
+            Instituto Jesús María
+          </div>
+          <p>Oruro - Bolivia</p>
+          <p>Formación especializada en sistemas informáticos, hardware, software y redes. Programa académico completo con enfoque práctico en resolución de problemas tecnológicos y desarrollo de soluciones informáticas.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="section contact" role="region" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading" class="section__title">Contacto</h2>
+      <div class="contact__container">
+        <div class="contact__info">
+          <p>Si estás interesado en trabajar conmigo o quieres más información, no dudes en contactarme a través de este formulario o por cualquiera de mis medios de contacto.</p>
+          <address style="margin-top: 20px; font-style: normal;">
+            <p>
+              <a href="mailto:laualevgaclaros@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> <strong>Email:</strong> laualevgaclaros@gmail.com
+              </a>
+            </p>
+            <p>
+              <a href="https://wa.me/59161832844?text=Hola%20Laura,%20vi%20tu%20curriculum%20y%20me%20interesa%20contactarte" class="contact-link" target="_blank">
+                <i class="fas fa-phone"></i> <strong>Celular:</strong> +591 61832844
+              </a>
+            </p>
+            <p>
+              <a href="https://www.google.com/maps?q=Oruro,Bolivia" class="contact-link" target="_blank">
+                <i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Oruro, Bolivia
+              </a>
+            </p>
+          </address>
+          
+          <!-- Botón destacado de WhatsApp -->
+          <a href="https://wa.me/59161832844?text=Hola%20Laura,%20vi%20tu%20curriculum%20y%20me%20interesa%20contactarte" class="whatsapp-button" target="_blank" style="margin-top: 20px;">
+            <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
+          </a>
+        </div>
+        <div class="contact__form">
+          <form id="form-contacto" action="#" method="post" novalidate>
+            <div class="form__group">
+              <label for="nombre" class="form__label">Nombre</label>
+              <input type="text" id="nombre" name="nombre" class="form__input" required aria-required="true">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="email" class="form__input" required aria-required="true">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label for="mensaje" class="form__label">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" class="form__textarea" required aria-required="true"></textarea>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="social-links">
+        <a href="www.linkedin.com/in/laura-alejandra-vega-claros-a58220188" class="social-link" aria-label="Perfil de LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/lauravegaclaros" class="social-link" aria-label="Perfil de GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/RosticeriaNano/" class="social-link" aria-label="Perfil de Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/59161832844?text=Hola%20Laura,%20vi%20tu%20curriculum%20y%20me%20interesa%20contactarte" class="social-link" aria-label="Enviar mensaje por WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2025 Laura Alejandra Vega Claros. Todos los derechos reservados.</p>
+    </div>
   </footer>
-  <script>
-    (function() {
-      const btnTheme = document.getElementById('btnTheme');
-      const html = document.documentElement;
 
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        html.setAttribute('data-theme', savedTheme);
-        btnTheme.setAttribute('aria-pressed', savedTheme === 'dark');
-      }
-
-      btnTheme.addEventListener('click', () => {
-        const current = html.getAttribute('data-theme');
-        const newTheme = current === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', newTheme);
-        btnTheme.setAttribute('aria-pressed', newTheme === 'dark');
-        localStorage.setItem('theme', newTheme);
-      });
-    })();
-  </script>
-</body>
+  <!-- MODAL DE DESCARGA -->
+  <div class="download-modal" id="downloadModal">
+    <div class="modal-content">
+      <h2 class="modal-title">Descargar Currículum</h2>
+      <p>Selecciona el formato en el que deseas descargar mi currículum:</p>
+      <div class="modal-buttons">
+        <button id="downloadPDF" class="btn">Descargar PDF</button>
+        <button id="downloadPrint" class="btn">Imprimir</button>
+        <button id="closeModal" class="btn" style="background-color: #95a5a6;">Cancelar</button>
+      </div>
+    </div>
+  </div>
 </html>
